@@ -1,0 +1,10 @@
+---
+- name: Update package cache
+  apt:
+    update_cache: yes
+
+- name: Upgrade packages
+  apt:
+    upgrade: dist
+    autoremove: yes
+    autoclean: yes

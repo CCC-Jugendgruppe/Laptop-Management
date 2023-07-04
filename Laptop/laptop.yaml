@@ -1,0 +1,22 @@
+---
+- name: Debian Laptop Playbook
+  hosts: hosts
+  become: true
+
+  roles:
+    - role: updates
+      tags:
+        - updates
+
+    - role: software_installation
+      tags:
+        - software_installation
+
+    - role: git_download
+      tags:
+        - git_download
+
+    - role: backup
+      tags:
+        - backup
+
