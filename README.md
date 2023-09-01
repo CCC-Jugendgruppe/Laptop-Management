@@ -1,2 +1,5 @@
-# Laptop
-Ansible-Playbook
+# Laptop-Management
+
+## Beinhaltet:
+* Ansible-Playbook
+* Debain preseed.cfg file
