@@ -13,3 +13,8 @@
 ## Cleaning
 
 1. Run `m̀ake clean`
+
+
+# todo
+
+* boot-partition isn't auto selected
