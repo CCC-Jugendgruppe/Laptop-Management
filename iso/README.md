@@ -20,4 +20,6 @@ disks `Bus Type`to SATA
 
 1. Run `m̀ake clean`
 
-# todo
+# Todo
+
+- Setup SSH Key
