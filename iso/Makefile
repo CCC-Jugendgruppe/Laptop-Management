@@ -1,6 +1,6 @@
 setup: 
 	mkdir -p vanilla-iso new-iso
-	sudo mount -o loop debian12.iso vanilla-iso
+	sudo mount -o loop debian*12*.iso vanilla-iso
 	cp -rT vanilla-iso/ new-iso/
 	sudo umount vanilla-iso
 
