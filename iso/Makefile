@@ -3,12 +3,12 @@ setup:
 	sudo mount -o loop debian12.iso vanilla-iso
 	cp -rT vanilla-iso/ new-iso/
 	sudo umount vanilla-iso
+	# sudo chmod a+w -R new-iso/boot/grub/
+	# https://debianforum.de/forum/viewtopic.php?t=167409#p1190702
+	# sed -i -e 's/auto=true priority=critical/auto=true priority=high hostname?= domain=/g' new-iso/boot/grub/grub.cfg
+	# sudo chmod a-w -R new-iso/boot/grub/
 
 build:
-	sudo chmod a+w -R new-iso/boot/grub/
-	# https://debianforum.de/forum/viewtopic.php?t=167409#p1190702
-	sed -i -e 's/auto=true priority=critical/auto=true priority=high hostname?= domain=/g' new-iso/boot/grub/grub.cfg
-	sudo chmod a-w -R new-iso/boot/grub/
 	sudo chmod a+w -R new-iso/install.amd
 	cp preseed.cfg new-iso/install.amd/
 	gunzip new-iso/install.amd/initrd.gz
