@@ -13,7 +13,6 @@ build:
 	sudo chmod a-w -R new-iso/install.amd
 	fakeroot sudo genisoimage -r -J -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -o preseed-debian-12.iso new-iso
 	#sudo isohybrid preseed-debian-12.iso
-	md5sum preseed-debian-12.iso
 
 clean:
 	rm -rf vanilla-iso
