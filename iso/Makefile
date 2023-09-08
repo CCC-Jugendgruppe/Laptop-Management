@@ -18,8 +18,10 @@ build:
 	fakeroot sudo genisoimage -r -J -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -o preseed-debian-12.iso new-iso
 	#sudo isohybrid preseed-debian-12.iso
 
+umount-vanilla:
+	sudo umount -v vanilla-iso
+
 clean:
-	sudo umount vanilla-iso
 	rm -rvf vanilla-iso
 	sudo rm -rvf new-iso
 	rm -rvf preseed-debian12.iso
