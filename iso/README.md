@@ -23,3 +23,8 @@ disks `Bus Type`to SATA
 # Todo
 
 - Setup SSH Key
+- Diese dinge müssen noch per hand konfiguriert werden:
+    - Partitionen müssen bestätigt werden
+    - "Paketmanager konfigurieren" will, dass nach anderen cdroms gesucht wird.
+    - "popularity contest" muss per hand aktiviert / deaktiviert werden
+
