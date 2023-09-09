@@ -23,5 +23,7 @@ disks `Bus Type`to SATA
 # Todo
 
 - Setup SSH Key
+- Hostname question not shown when using BIOS
+- ISO not booting on UEFI VMs
 - Diese dinge müssen noch per hand konfiguriert werden:
-    - Partitionen müssen bestätigt werden
+  - Partitionen müssen bestätigt werden
