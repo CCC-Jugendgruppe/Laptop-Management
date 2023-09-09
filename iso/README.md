@@ -18,7 +18,7 @@ disks `Bus Type`to SATA
 
 ## Cleaning
 
-1. Run `m̀ake clean`
+1. Run `make clean`
 
 # Todo
 
