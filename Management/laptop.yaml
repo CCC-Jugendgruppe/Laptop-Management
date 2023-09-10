@@ -1,6 +1,8 @@
 ---
 - name: Debian Laptop Playbook
   hosts: hosts
+  remote_user: chaos
+  gather_facts: false
   become: true
 
   roles:
