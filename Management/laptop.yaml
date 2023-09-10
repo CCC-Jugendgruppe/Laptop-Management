@@ -8,13 +8,13 @@
       tags:
         - updates
 
-    - role: software_installation
+    - role: install
       tags:
-        - software_installation
+        - install
 
-    - role: git_download
+    - role: git
       tags:
-        - git_download
+        - git
 
     - role: backup
       tags:
