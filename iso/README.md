@@ -6,6 +6,14 @@ The preseed assumes the drive to install grub to is `/dev/sda`. Some VM Managers
 like virt-manager use /dev/vda by default. For virt-manager you need to set the
 disks `Bus Type`to SATA
 
+The iso currently does not work with UEFI VMs. Use BIOS instead. It works on
+hardware with UEFI.
+
+## Hostname
+
+The Hostname promt doesnt work with BIOS on both Hardware and VMs. Use UEFI if
+Possible or configure it manually after installing.
+
 ## Setup
 
 1. Download debian iso
@@ -25,5 +33,5 @@ disks `Bus Type`to SATA
 - Setup SSH Key
 - Hostname question not shown when using BIOS
 - ISO not booting on UEFI VMs
-- Diese dinge müssen noch per hand konfiguriert werden:
-  - Partitionen müssen bestätigt werden
+- These things still need to be handled by the user:
+  - Partitions needs to be set up manually by the user
