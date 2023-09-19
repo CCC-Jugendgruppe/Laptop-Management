@@ -2,6 +2,7 @@
 ## Beinhaltet:
 * Ansible-Playbook
 * Debain preseed.cfg file
+* Skripte für Server Einrichtung 
 
 ## Anderes
 
