@@ -5,14 +5,14 @@ setup:
 	sudo mount -v -o loop debian*12*.iso vanilla-iso
 	cp -vrT vanilla-iso/ new-iso/
 	sudo umount -v vanilla-iso/
-	sudo chmod a+w -vR new-iso/boot/grub/
+	sudo chmod a+w -vR new-iso/
 	# https://debianforum.de/forum/viewtopic.php?t=167409#p1190702
 	sed -i -e 's/auto=true priority=critical/auto=true priority=high hostname?= domain=/g' new-iso/boot/grub/grub.cfg
-	sudo chmod a-w -vR new-iso/boot/grub/
+	mkdir -v new-iso/extra 
+	sudo chmod a-w -vR new-iso/
 
 build:
 	cp -v custom-preseed.cfg preseed.cfg
-	sed -i -e 's\ANSIBLE-SSH-KEY\${ANSIBLE_PUBLIC_KEY}\g' preseed.cfg
 	sudo chmod a+w -vR new-iso/install.amd
 	cp -v preseed.cfg new-iso/install.amd/
 	gunzip -v new-iso/install.amd/initrd.gz
@@ -20,6 +20,10 @@ build:
 	rm -v preseed.cfg
 	gzip -v new-iso/install.amd/initrd
 	sudo chmod a-w -vR new-iso/install.amd
+	sudo chmod a+w -vR new-iso/extra
+	cp -v ccc-user-setup.sh new-iso/extra/ccc-user-setup
+	sed -i -e 's\ANSIBLE-SSH-KEY\${ANSIBLE_PUBLIC_KEY}\g' new-iso/extra/ccc-user-setup
+	sudo chmod a-w -vR new-iso/extra
 	fakeroot sudo genisoimage -r -J -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -o preseed-debian-12.iso new-iso
 	#sudo isohybrid preseed-debian-12.iso
 
