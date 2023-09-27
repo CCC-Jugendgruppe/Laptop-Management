@@ -30,8 +30,10 @@ Possible or configure it manually after installing.
 
 # Todo
 
-- Setup SSH Key
-- Hostname question not shown when using BIOS
-- ISO not booting on UEFI VMs
-- These things still need to be handled by the user:
-  - Partitions needs to be set up manually by the user
+- [x] Setup SSH Key
+- [x] Hostname question not shown when using BIOS
+- [x] ISO not booting on UEFI VMs
+- [x] switch to KDE
+- [ ] integrate apt caching server
+- [ ] TBD: These things still need to be handled by the user:
+  - [ ] Partitions needs to be set up manually by the user
