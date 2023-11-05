@@ -3,5 +3,4 @@
   ansible.builtin.copy:
     src: authorized_keys
     dest: /home/chaos/.ssh/authorized_keys
-    mode: 0600
-
+    mode: '600'
