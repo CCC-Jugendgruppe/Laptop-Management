@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # default values
-PLAYBOOK="laptop.yaml"
+PLAYBOOK="laptop.yml"
 HOSTS="hosts"
 
 
