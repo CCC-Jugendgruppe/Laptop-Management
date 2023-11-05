@@ -24,7 +24,11 @@
     - role: copy_proxy
       tags:
         - copy_proxy
-  
+
     - role: pub_ssh_key
       tags:
         - pub_ssh_key
+
+    - role: wallpaper
+      tags:
+        - wallpaper

@@ -1,0 +1,10 @@
+---
+- name: Transfer wallpaper
+  become: true
+  ansible.builtin.copy:
+    src: ccc-jugendgruppe-goe.jpg
+    dest: /usr/share/wallpapers/ccc-jugendgruppe-goe.jpg
+    mode: '644'
+
+- name: Set Wallpaper
+  ansible.builtin.script: set_wallpaper.sh
