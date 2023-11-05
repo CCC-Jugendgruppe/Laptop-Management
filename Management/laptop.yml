@@ -1,0 +1,30 @@
+---
+- name: Debian Laptop Playbook
+  hosts: debian_laptops
+  remote_user: chaos
+  gather_facts: false
+
+  roles:
+    - role: update
+      tags:
+        - update
+
+    - role: install
+      tags:
+        - install
+
+    - role: git
+      tags:
+        - git
+
+    - role: backup
+      tags:
+        - backup
+
+    - role: copy_proxy
+      tags:
+        - copy_proxy
+  
+    - role: pub_ssh_key
+      tags:
+        - pub_ssh_key

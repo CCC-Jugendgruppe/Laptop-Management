@@ -1,0 +1,9 @@
+---
+- name: Copy the 00proxy file to laptops
+  become: true
+  ansible.builtin.copy:
+    src: 00proxy
+    dest: /etc/apt/apt.conf.d/00proxy
+    owner: root
+    group: root
+    mode: '644'
