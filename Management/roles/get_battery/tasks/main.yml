@@ -3,7 +3,7 @@
   command: cat /sys/class/power_supply/BAT0/capacity
   register: charge
 
-- name: Get Battery State
+- name: Get Battery Status
   command: cat /sys/class/power_supply/BAT0/status
   register: status
 
