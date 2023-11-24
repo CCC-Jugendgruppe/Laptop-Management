@@ -9,6 +9,10 @@
       tags:
         - update
 
+    - role: get_battery
+      tags:
+        - get_battery
+
     - role: install
       tags:
         - install

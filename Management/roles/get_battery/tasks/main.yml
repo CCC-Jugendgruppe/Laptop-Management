@@ -1,0 +1,12 @@
+---
+- name: Get Battery Charge
+  command: cat /sys/class/power_supply/BAT0/capacity
+  register: charge
+
+- name: Get Battery State
+  command: cat /sys/class/power_supply/BAT0/status
+  register: status
+
+- ansible.builtin.debug: msg="{{ status.stdout }}"
+- ansible.builtin.debug: msg="{{ charge.stdout }}"
+
