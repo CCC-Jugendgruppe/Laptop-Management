@@ -6,7 +6,7 @@
 
 EXTRA=''
 
-if [[ -z "$1" ]]; then
+if [ -z "$1" ]; then
 	echo "Avaiable Tags:"
 	# get available tags, ignore leading info (only get last line)
 	TAGS=$(ansible-playbook $FILE --list-tags | tail -n 1 ) 
